@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Shade&family=Bungee+Spice&family=Diplomata&family=Diplomata+SC&family=Ewert&family=Faster+One&family=Gajraj+One&family=Holtwood+One+SC&family=Libre+Barcode+128&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Extended+Text&family=Libre+Barcode+39+Text&family=Monofett&family=Poppins&family=Rye&family=Shojumaru&family=Zilla+Slab+Highlight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" integrity="sha256-7jUS+MWeqkFdmW9ozkZ7mPagz+QmMbsBlt+Q3MsE+FU=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js" integrity="sha256-mW1wrhuKp2Cl0DCVr/7+GTdl168ZrmB6FayoMAlSmH0=" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="/assets/index-1e70a60d.js"></script>
+    <link rel="stylesheet" href="/assets/index-fb57e466.css">
+  </head>
+  <body>
+    <main id="app">
+      <div id="" class="row row-cols-3">
+        <div id="" class="col-md-4 mb-4 columna">
+          <form id="busqueda">
+            <input id="input_pokemon" type="search" name="nombre" value="" placeholder="Nombre o Id Pokemon">
+            <input type="submit" value="Buscar" class="input-red">
+            <br>
+            <br>
+            <button id="keyboard_1" class="button-green">1</button>
+            <button id="keyboard_2" class="button-green">2</button>
+            <button id="keyboard_3" class="button-green">3</button>
+            <button id="keyboard_4" class="button-green">4</button>
+            <button id="keyboard_5" class="button-green">5</button>
+            <button id="keyboard_6" class="button-green">6</button>
+            <button id="keyboard_7" class="button-green">7</button>
+            <button id="keyboard_8" class="button-green">8</button>
+            <button id="keyboard_9" class="button-green">9</button>
+            <button id="keyboard_0" class="button-green">0</button>
+            <br>      
+            <button id="keyboard_q" style="margin-left: 30px;" class="button-blue">Q</button>
+            <button id="keyboard_w" class="button-blue">W</button>
+            <button id="keyboard_e" class="button-blue">E</button>
+            <button id="keyboard_r" class="button-blue">R</button>
+            <button id="keyboard_t" class="button-blue">T</button>
+            <button id="keyboard_y" class="button-blue">Y</button>
+            <button id="keyboard_u" class="button-blue">U</button>
+            <button id="keyboard_i" class="button-blue">I</button>
+            <button id="keyboard_o" class="button-blue">O</button>
+            <button id="keyboard_p" class="button-blue">P</button>
+            <br>
+            <button id="keyboard_a" style="margin-left: 30px;" class="button-blueDark">A</button>
+            <button id="keyboard_s" class="button-blueDark">S</button>
+            <button id="keyboard_d" class="button-blueDark">D</button>
+            <button id="keyboard_f" class="button-blueDark">F</button>
+            <button id="keyboard_g" class="button-blueDark">G</button>
+            <button id="keyboard_h" class="button-blueDark">H</button>
+            <button id="keyboard_j" class="button-blueDark">J</button>
+            <button id="keyboard_k" class="button-blueDark">K</button>
+            <button id="keyboard_l" class="button-blueDark">L</button>
+            <button id="keyboard_ñ" class="button-blueDark">Ñ</button>
+            <br>
+            <button id="keyboard_z" class="button-blue">Z</button>
+            <button id="keyboard_x" class="button-blue">X</button>
+            <button id="keyboard_c" class="button-blue">C</button>
+            <button id="keyboard_v" class="button-blue">V</button>
+            <button id="keyboard_b" class="button-blue">B</button>
+            <button id="keyboard_n" class="button-blue">N</button>
+            <button id="keyboard_m" class="button-blue">M</button>
+          </form>
+        </div>
+        <div id="" class="col-md-3 mb-3">
+          <section id="container"></section>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+          <label for="typeFilter" class="">Filtrar por tipo:</label>
+          <select id="typeFilter" class="form-select">
+              <option value="todos">Todos</option>
+              <option value="normal">Normal</option>
+              <option value="fighting">Fighting</option>
+              <option value="flying">Flying</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="rock">Rock</option>
+              <option value="bug">Bug</option>
+              <option value="ghost">Ghost</option>
+              <option value="steel">Steel</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="electric">Electric</option>
+              <option value="psychic">Psychic</option>
+              <option value="ice">Ice</option>
+              <option value="dragon">Dragon</option>
+              <option value="dark">Dark</option>
+              <option value="fairy">Fairy</option>
+              <option value="unknown">Unknown</option>
+              <option value="shadow">Shadow</option>
+          </select>
+      </div>
+
+      </div>
+      <section class="container my-3 mx-5 text-center">
+        <h1>Pokemones</h1>
+        <section class="row gy-3 py-3" id="pokemonesDom"></section>
+      </section>
+    </main>
+    
+  </body>
+</html>
+
+
